@@ -20,16 +20,14 @@ bot = Bot(token='7065448388:AAEdosm8jYko3g03olNhNAK4mcKvaQHnNbA')
 dp = Dispatcher()
 
 
-
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
     await message.reply(f"Салом {message.from_user.full_name}, WordFixer ботга хуш келибсиз!")
 
 
 @dp.message(Command('help'))
-async def help_user(message: types.message)-> None:
+async def help_user(message: types.message) -> None:
     await message.reply("Бу ботдан фойдаланиш учун сўз юборинг(фақат кирилча)")
-
 
 
 @dp.message()
@@ -43,8 +41,6 @@ async def checkImlo(message: types.Message):
         print(counter)
         for i in counter:
             await message.answer(f'{mavjud(i)}')
-
-
 
 
 async def main() -> None:

@@ -3,11 +3,11 @@ from difflib import get_close_matches
 
 
 def checkWord(word, words=words):
-    word = word.lower()   #userdan kelgan so'z
-    matches = set(get_close_matches(word,words))    #o'xshash so'zlar royxati
+    word = word.lower()  # userdan kelgan so'z
+    matches = set(get_close_matches(word, words))  # o'xshash so'zlar royxati
     available = False
 
-    if word in matches:   #agar user kiritgan so'z to'gri kiritilgan bolsa
+    if word in matches:  # agar user kiritgan so'z to'gri kiritilgan bolsa
         available = True
         matches = word
 
@@ -18,7 +18,7 @@ def checkWord(word, words=words):
         word = word.replace('x', 'ҳ')
         matches.update(get_close_matches(word, words))
 
-    return {'available': available, 'matches': matches}  #so'z to'gri kirilganligini va o'xshash so'zlarni print qilish
+    return {'available': available, 'matches': matches}  # so'z to'gri kirilganligini va o'xshash so'zlarni print qilish
 
 
 def notMatches(word):
@@ -43,12 +43,6 @@ def mavjud(input_str):
     return response
 
 
-
-
 if __name__ == '__main__':
     print(checkWord('журналистик'))
     print(checkWord('ҳўшшаймқ'))
-
-
-
-

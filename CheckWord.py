@@ -3,8 +3,8 @@ from difflib import get_close_matches
 
 
 def checkWord(word, words=words):
-    word = word.lower()  # userdan kelgan so'z
-    matches = set(get_close_matches(word, words))  # o'xshash so'zlar royxati
+    word = word.lower()  # User input
+    matches = set(get_close_matches(word, words))  # similar words list
     available = False
 
     if word in matches:  # agar user kiritgan so'z to'gri kiritilgan bolsa

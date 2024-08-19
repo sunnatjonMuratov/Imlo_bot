@@ -7,7 +7,7 @@ def checkWord(word, words=words):
     matches = set(get_close_matches(word, words))  # similar words list
     available = False
 
-    if word in matches:  # agar user kiritgan so'z to'gri kiritilgan bolsa
+    if word in matches:  
         available = True
         matches = word
 

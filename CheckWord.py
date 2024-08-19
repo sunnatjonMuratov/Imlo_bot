@@ -18,7 +18,7 @@ def checkWord(word, words=words):
         word = word.replace('x', 'ҳ')
         matches.update(get_close_matches(word, words))
 
-    return {'available': available, 'matches': matches}  # so'z to'gri kirilganligini va o'xshash so'zlarni print qilish
+    return {'available': available, 'matches': matches}  # print correct and similar inputs words
 
 
 def notMatches(word):
